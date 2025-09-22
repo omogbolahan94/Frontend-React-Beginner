@@ -69,24 +69,37 @@ import viteLogo from '/vite.svg'
 
 // export default App
 
+
+// export default function ParentComponent() {
+//   return (
+//     <>
+//       <UserComponent />
+//       <ProfileComponent />
+//       <FeedComponent />
+//     </>
+//   );
+// }
+
+// function UserComponent() {
+//   return <h1> User Component </h1>;
+// }
+
+// function ProfileComponent() {
+//   return <h1> Profile Component </h1>;
+// }
+
+// function FeedComponent() {
+//   return <h1> Feed Component</h1>;
+// }
+
+// >>>>>>>>>>>>>> REACT STATE >>>>>>>>>>>>>>>>>>
 export default function ParentComponent() {
+  const [name, setName] = useState('John')
+
   return (
     <>
-      <UserComponent />
-      <ProfileComponent />
-      <FeedComponent />
+      <h1>Hello {name}</h1>
+      <button onClick={() => setName('Mark')}>Change Name</button>
     </>
-  );
-}
-
-function UserComponent() {
-  return <h1> User Component </h1>;
-}
-
-function ProfileComponent() {
-  return <h1> Profile Component </h1>;
-}
-
-function FeedComponent() {
-  return <h1> Feed Component</h1>;
+  )
 }
